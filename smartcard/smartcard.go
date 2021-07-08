@@ -25,6 +25,7 @@ package smartcard
 import (
 	"bytes"
 	"fmt"
+	"log"
 
 	"github.com/deeper-x/gopcsc/smartcard/pcsc"
 )
@@ -112,6 +113,14 @@ func Command4(cla, ins, p1, p2 byte, data []byte, le byte) CommandAPDU {
 // Create ISO7816-4 SELECT FILE APDU.
 func SelectCommand(aid ...byte) CommandAPDU {
 	return Command3(0x00, 0xa4, 0x04, 0x00, aid)
+}
+
+func ReadTSFID() {
+	log.Println("todo")
+}
+
+func CdTsFID() {
+	log.Println("todo")
 }
 
 // Check if command APDU is valid
