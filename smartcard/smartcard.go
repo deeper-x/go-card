@@ -116,11 +116,11 @@ func SelectCommand(aid ...byte) CommandAPDU {
 }
 
 func ReadTSFID() {
-	log.Println("todo")
+	log.Println("todo tag v1.3.1-202107081654")
 }
 
 func CdTsFID() {
-	log.Println("todo")
+	log.Println("todo tag v1.3.1-202107081654")
 }
 
 // Check if command APDU is valid
