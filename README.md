@@ -32,7 +32,7 @@ None
 Installation
 ------------
 
-    go get github.com/sf1/go-card/smartcard
+    go get github.com/deeper-x/gopcsc/smartcard
 
 Usage
 -----

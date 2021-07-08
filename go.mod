@@ -1,3 +1,3 @@
-module github.com/sf1/go-card
+module github.com/deeper-x/gopcsc
 
 go 1.12
