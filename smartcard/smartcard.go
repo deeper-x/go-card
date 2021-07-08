@@ -25,7 +25,6 @@ package smartcard
 import (
 	"bytes"
 	"fmt"
-	"log"
 
 	"github.com/deeper-x/gopcsc/smartcard/pcsc"
 )
@@ -115,12 +114,14 @@ func SelectCommand(aid ...byte) CommandAPDU {
 	return Command3(0x00, 0xa4, 0x04, 0x00, aid)
 }
 
-func ReadTSFID() {
-	log.Println("todo tag v1.3.1-202107081654")
+// ReadFID read binary data for current FID
+func ReadFID() CommandAPDU {
+	return Command3(0x00, 0xB0, 0x00, 0x00, []byte{})
 }
 
-func CdTsFID() {
-	log.Println("todo tag v1.3.1-202107081654")
+// SelectFID given one 4 bytes fid, splitted in 1 and 2, select it in filesystem
+func SelectFID(FID1, FID2 byte) CommandAPDU {
+	return Command3(0x00, 0xA4, 0x00, 0x00, []byte{FID1, FID2})
 }
 
 // Check if command APDU is valid
